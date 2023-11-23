@@ -13,18 +13,19 @@ console.log(objetoJSON);
 });
  */
 
-function readJson() {
-
-    fetch("archive.json")
-    .then((Response) => Response.json())
+function readTitles() {
+    fetch('./archive.json')
+    .then((resp) => resp.json())
     .then((data) => {
-        data.results.forEach(element => {
-            console.log(element.results);
+        console.log(data.title);
+/*         data.results.forEach(element => {
+            console.log(element.title); */
         });
-    });         
-}
+    }     
+    /* catch (error) => console.error('Ha ocurrido un error', (error))      */
 
-readJson();
+
+readTitles();
 
 
 /* data.results.map(item) {
