@@ -4,8 +4,7 @@
 function readTitles() {
     fetch('./archive.json')
     .then((resp) => resp.json())
-    .then((data) => {
-        console.log(data.title);
+    .then((data) => {       
        data.results.forEach(element => {
             console.log(element.title);
         });
